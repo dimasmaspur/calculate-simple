@@ -25,7 +25,7 @@ jobs:
         cache: 'npm'
 
     - name: create env
-      script: |
+      run: |
           cd ~/calculate
           touch .env
           echo API_ENDPOINT="jancuk" >> .env
