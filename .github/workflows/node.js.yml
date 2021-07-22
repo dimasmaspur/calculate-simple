@@ -41,4 +41,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            ls -lah
+            cd ~/calculate#
+            git pull origin master
+            npm install
+            pm2 restart all
