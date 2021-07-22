@@ -25,10 +25,11 @@ jobs:
         cache: 'npm'
 
     - name: create env
-      run: |
+      script: |
+          cd ~/calculate
           touch .env
           echo API_ENDPOINT="jancuk" >> .env
-          echo API_KEY="jancuk juga" .env
+          echo API_KEY="jancuk juga" >> .env
           cat .env
     - run: npm ci
     - run: npm run build --if-present
